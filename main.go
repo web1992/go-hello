@@ -1,12 +1,15 @@
 package main
 
 import (
-	"web1992/testgosemver"
+	ostest "web1992/ostest"
+	testgosemver "web1992/testgosemver"
 	vartest "web1992/var"
 )
 
 func main() {
 	println("hello go world.")
-	vartest.VarTest()
+
+	ostest.OsTest()
+	println(vartest.GlobaVar)
 	testgosemver.TestGoSemver()
 }
