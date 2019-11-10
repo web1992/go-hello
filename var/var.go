@@ -1,8 +1,8 @@
-package test
+package vartest
 
 import "fmt"
 
-func main() {
+func VarTest() {
 	s := 1
 	fmt.Println(s)
 }
