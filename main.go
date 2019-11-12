@@ -1,6 +1,6 @@
 package main
 
-import "web1992/sorttest"
+import "web1992/arraytest"
 
 func main() {
 	println("hello go world.")
@@ -17,5 +17,7 @@ func main() {
 	// add := functest.Add()
 	// println(add(100, 90))
 
-	sorttest.TestSort()
+	// sorttest.TestSort()
+
+	arraytest.TestArray()
 }
