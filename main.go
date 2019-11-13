@@ -1,6 +1,8 @@
 package main
 
-import "web1992/arraytest"
+import (
+	"web1992/slicetest"
+)
 
 func main() {
 	println("hello go world.")
@@ -19,5 +21,6 @@ func main() {
 
 	// sorttest.TestSort()
 
-	arraytest.TestArray()
+	// arraytest.TestArray()
+	slicetest.SliceTest()
 }
