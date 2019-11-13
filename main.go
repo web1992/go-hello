@@ -1,7 +1,7 @@
 package main
 
 import (
-	"web1992/slicetest"
+	"web1992/maptest"
 )
 
 func main() {
@@ -22,5 +22,8 @@ func main() {
 	// sorttest.TestSort()
 
 	// arraytest.TestArray()
-	slicetest.SliceTest()
+
+	// slicetest.SliceTest()
+
+	maptest.MapTest()
 }
