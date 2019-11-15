@@ -28,4 +28,13 @@ func MapTest() {
 		fmt.Println("key k2 in map value =", v)
 	}
 
+	map2["k3"] = "v3"
+	fmt.Println("key k3 in map value =", map2["k3"])
+	delete(map2, "k3")
+	fmt.Println("key k3 in map value =", map2["k3"])
+
+	for k, vv := range map2 {
+		fmt.Println("k=", k, "v=", vv)
+	}
+
 }
