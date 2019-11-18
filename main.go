@@ -1,8 +1,6 @@
 package main
 
-import (
-	"web1992/stringtest"
-)
+import "web1992/defertest"
 
 func main() {
 	println("hello go world.")
@@ -29,5 +27,7 @@ func main() {
 
 	// consttest.ConstTest()
 
-	stringtest.StringTest()
+	// stringtest.StringTest()
+
+	defertest.DeferTest()
 }
