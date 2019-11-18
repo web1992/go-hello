@@ -1,7 +1,7 @@
 package main
 
 import (
-	"web1992/consttest"
+	"web1992/stringtest"
 )
 
 func main() {
@@ -27,5 +27,7 @@ func main() {
 
 	// maptest.MapTest()
 
-	consttest.ConstTest()
+	// consttest.ConstTest()
+
+	stringtest.StringTest()
 }
