@@ -1,6 +1,6 @@
 package main
 
-import "web1992/structtest"
+import "web1992/methodtest"
 
 func main() {
 	println("hello go world.")
@@ -31,5 +31,7 @@ func main() {
 
 	// defertest.DeferTest()
 
-	structtest.StructTest()
+	// structtest.StructTest()
+
+	methodtest.MethodTest()
 }
