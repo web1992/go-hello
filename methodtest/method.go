@@ -9,13 +9,18 @@ type car struct {
 	color string
 }
 
-func (c *car) run() {
-	fmt.Println(c.name, "car run.")
+// 重写对象的 String 方法
+func (car *car) String() string {
+	return "your car name is" + car.name + " and color is " + car.color
 }
 
-func (c *car) start() string {
+func (car *car) run() {
+	fmt.Println(car.name, "car run.")
+}
 
-	return c.name + " started."
+func (car *car) start() string {
+
+	return car.name + " started."
 }
 
 // MethodTest test
@@ -27,4 +32,5 @@ func MethodTest() {
 	s := c1.start()
 	fmt.Println(s)
 	c1.run()
+	fmt.Println(c1)
 }
