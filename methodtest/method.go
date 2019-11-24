@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+type myint int
+
 type car struct {
 	name  string
 	color string
@@ -23,6 +25,11 @@ func (car *car) start() string {
 	return car.name + " started."
 }
 
+func (myint *myint) addOne(a int) int {
+
+	return a + 1
+}
+
 // MethodTest test
 func MethodTest() {
 
@@ -33,4 +40,8 @@ func MethodTest() {
 	fmt.Println(s)
 	c1.run()
 	fmt.Println(c1)
+
+	var a = new(myint)
+	b := a.addOne(1)
+	fmt.Println(b)
 }
