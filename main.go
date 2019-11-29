@@ -1,6 +1,6 @@
 package main
 
-import "web1992/methodtest"
+import "web1992/interfacetest"
 
 func main() {
 	println("hello go world.")
@@ -33,5 +33,8 @@ func main() {
 
 	// structtest.StructTest()
 
-	methodtest.MethodTest()
+	// methodtest.MethodTest()
+
+	interfacetest.InterfaceTest()
+
 }
