@@ -39,4 +39,16 @@ func InterfaceTest() {
 
 	fmt.Println("car1 is  ", car1)
 
+	println(car1)
+	println(carBenz)
+
+	var ins2 Car
+	b2 := BenzCar{"Benz 2"}
+	b2.run()
+	fmt.Println(ins2)
+	// below is error
+	// to slove this you can use b2 := BenzCar{"Benz 2"}
+	// ins2 = b2
+	ins2.run()
+
 }
