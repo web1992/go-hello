@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+// EmptyInterface interface
+type EmptyInterface interface{}
+
 // Car interface
 type Car interface {
 	run()
@@ -49,6 +52,10 @@ func InterfaceTest() {
 	// below is error
 	// to slove this you can use b2 := BenzCar{"Benz 2"}
 	// ins2 = b2
-	ins2.run()
+	// ins2.run()
+
+	var ei EmptyInterface
+	ei = b2
+	fmt.Println("ei ", ei)
 
 }
