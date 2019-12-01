@@ -62,6 +62,7 @@ func UseChain() {
 		Addr: "127.0.0.1:8080",
 	}
 	http.Handle("/hello", log(&myHandler))
+	http.HandleFunc("/body", body)
 	server.ListenAndServe()
 }
 
@@ -76,4 +77,18 @@ func log(h http.Handler) http.Handler {
 		h.ServeHTTP(w, r)
 	}
 	return http.HandlerFunc(f)
+}
+
+// body test
+// curl -id "name=lognshuai&age=23" 127.0.0.1:8080/body
+func body(w http.ResponseWriter, r *http.Request) {
+
+	len := r.ContentLength
+
+	body := make([]byte, len)
+
+	r.Body.Read(body)
+
+	fmt.Fprintf(w, "%s\n", string(body))
+
 }
