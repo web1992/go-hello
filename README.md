@@ -2,7 +2,7 @@
 
 ```sh
 # run main
-go run main.go 1.2.1 2.3.1
+go run main.go
 #  update modules
 go mod tidy
 ```

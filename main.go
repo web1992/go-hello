@@ -1,6 +1,6 @@
 package main
 
-import "web1992/selecttest"
+import "web1992/httptest"
 
 func main() {
 	println("hello go world.")
@@ -41,6 +41,7 @@ func main() {
 
 	// channeltest.ChannelTest()
 
-	selecttest.SelectTest()
+	// selecttest.SelectTest()
 
+	httptest.UseChain()
 }

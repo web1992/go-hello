@@ -1,5 +1,6 @@
 package iotatest
 
+// Month int
 type Month int
 
 const (
