@@ -1,9 +1,9 @@
 package main
 
-import "web1992/httptest"
+import "web1992/slicetest"
 
 func main() {
-	println("hello go world.")
+	println(">>>>>> hello-go >>>>>>")
 
 	// ostest.OsTest()
 	// println(vartest.GlobaVar)
@@ -21,7 +21,7 @@ func main() {
 
 	// arraytest.TestArray()
 
-	// slicetest.SliceTest()
+	slicetest.SliceTest()
 
 	// maptest.MapTest()
 
@@ -43,5 +43,5 @@ func main() {
 
 	// selecttest.SelectTest()
 
-	httptest.UseChain()
+	// httptest.UseChain()
 }

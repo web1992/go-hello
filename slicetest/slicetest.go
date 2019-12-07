@@ -15,8 +15,9 @@ func SliceTest() {
 	slice1[0] = 1
 	fmt.Println("slice1", slice1)
 
+	// test append
 	slice1 = append(slice1, 66)
-	fmt.Println("slice1", slice1)
+	fmt.Println("slice1 after append", slice1)
 
 	// this will make error
 	//slice1[4] = 66
@@ -28,21 +29,26 @@ func SliceTest() {
 
 	// test slice cut
 	slice2 := make([]int, 6)
-	fmt.Println(slice2)
+	// [0 0 0 0 0 0]
+	fmt.Println("slice2", slice2)
 	slice2[0] = 66
+	// []
+	fmt.Println("slice2", nilSlice)
 
 	// [0 0 0]
 	slice3 := slice2[3:]
-	fmt.Println(slice3)
+	fmt.Println("slice3", slice3)
 
-	// [77 0 0 0 0 0]
 	slice2[0] = 77
 	slice3 = slice2[0:]
-	fmt.Println(slice3)
+	// [77 0 0 0 0 0]
+	fmt.Println("slice3", slice3)
 
-	// [33]
 	slice2[3] = 33
+	// [77 0 0 33 0 0]
+	fmt.Println("slice2", slice2)
 	slice4 := slice2[3:4]
-	fmt.Println(slice4)
+	// [33]
+	fmt.Println("slice4", slice4)
 
 }
