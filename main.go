@@ -1,6 +1,6 @@
 package main
 
-import "web1992/slicetest"
+import "web1992/iftest"
 
 func main() {
 	println(">>>>>> hello-go >>>>>>")
@@ -21,7 +21,7 @@ func main() {
 
 	// arraytest.TestArray()
 
-	slicetest.SliceTest()
+	// slicetest.SliceTest()
 
 	// maptest.MapTest()
 
@@ -44,4 +44,8 @@ func main() {
 	// selecttest.SelectTest()
 
 	// httptest.UseChain()
+
+	// pointertest.Pointertest()
+
+	iftest.IfTest()
 }
