@@ -1,6 +1,6 @@
 package main
 
-import "web1992/iftest"
+import "web1992/functest"
 
 func main() {
 	println(">>>>>> hello-go >>>>>>")
@@ -8,14 +8,6 @@ func main() {
 	// ostest.OsTest()
 	// println(vartest.GlobaVar)
 	// testgosemver.TestGoSemver()
-
-	// f := func(x, y int) int {
-	// 	return x + y
-	// }
-	// functest.FuncTest("hello func", f)
-
-	// add := functest.Add()
-	// println(add(100, 90))
 
 	// sorttest.TestSort()
 
@@ -47,5 +39,7 @@ func main() {
 
 	// pointertest.Pointertest()
 
-	iftest.IfTest()
+	// iftest.IfTest()
+
+	functest.Main()
 }
