@@ -1,9 +1,14 @@
 package functest
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Main test
 func Main() {
+
+	deferTest()
 
 	f := func(x, y int) int {
 		return x + y
@@ -18,6 +23,39 @@ func Main() {
 	// slice as param
 	s := []string{"e", "f", "g", "h"}
 	sliceParamTest(2, s...)
+
+	// use func as param
+	useMulitReturnValuesFcunt(mulitReturnValuesTest())
+
+	// panicTest
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println("panic recover")
+			println(err.(string)) // 将 interface{} 转型为具体类型。
+		}
+
+	}()
+
+	// if panic arise， code after panic will not run
+	// panicTest()
+	// fmt.Println("run after panic")
+
+	v, error := errorsTest(1, 0)
+	if error != nil {
+		fmt.Println("errorsTest error", v, error)
+	} else {
+		fmt.Println("errorsTest ok", v)
+	}
+
+	v2, error2 := errorsTest(4, 2)
+	if error2 != nil {
+		fmt.Println("errorsTest error ", v2, error2)
+	} else {
+		fmt.Println("errorsTest ok ", v2)
+	}
+
+	e := error.Error()
+	fmt.Println("Error ", e)
 
 }
 
@@ -48,5 +86,38 @@ func sliceParamTest(x int, args ...string) {
 
 // mulitReturnValuesTest test
 func mulitReturnValuesTest() (int, string) {
-	return 1, "a"
+	return 1, "mulitReturnValuesTest"
+}
+
+// useMulitReturnValuesFcunt used to test mulitReturnValuesTest
+func useMulitReturnValuesFcunt(num int, str string) {
+	fmt.Println(str, num)
+}
+
+// deferTest
+func deferTest() {
+	defer func() {
+		fmt.Println("i am run in defer")
+	}()
+	var x int
+	x = 1
+	defer func() {
+		x = 2
+	}()
+	fmt.Println("deferTest", x)
+}
+
+func panicTest() {
+	panic("panicTest error")
+}
+
+func errorsTest(x int, y int) (int, error) {
+
+	error := errors.New("division by zero")
+
+	if y == 0 {
+		return 0, error
+	}
+	z := x / y
+	return z, nil
 }
