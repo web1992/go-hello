@@ -66,20 +66,24 @@ func ChannelTest() {
 // RequestTest test
 func RequestTest() {
 
-	carCh := make(chan *Car)
+	carCh := make(chan *Car, 2)
+	start := make(chan int)
 
-	go forChannelTest(carCh)
+	go forChannelTest(carCh, start)
 
 	c := &Car{"a", 1}
 
 	carCh <- c
 	carCh <- c
 
-	time.Sleep(time.Second * 1)
+	// time.Sleep(time.Second * 1)
 
+	start <- 1
 }
 
-func forChannelTest(queue chan *Car) {
+func forChannelTest(queue chan *Car, start chan int) {
+
+	<-start
 
 	for c := range queue {
 		fmt.Println("car is", c)
