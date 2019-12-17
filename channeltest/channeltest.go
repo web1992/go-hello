@@ -7,6 +7,12 @@ import (
 
 type empty interface{}
 
+// Request struct
+type Car struct {
+	name   string
+	wheels int
+}
+
 // ChannelTest test
 func ChannelTest() {
 
@@ -55,4 +61,27 @@ func ChannelTest() {
 
 	fmt.Println(time.Now())
 	fmt.Println(time.Second)
+}
+
+// RequestTest test
+func RequestTest() {
+
+	carCh := make(chan *Car)
+
+	go forChannelTest(carCh)
+
+	c := &Car{"a", 1}
+
+	carCh <- c
+	carCh <- c
+
+	time.Sleep(time.Second * 1)
+
+}
+
+func forChannelTest(queue chan *Car) {
+
+	for c := range queue {
+		fmt.Println("car is", c)
+	}
 }
