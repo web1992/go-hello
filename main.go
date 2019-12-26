@@ -1,6 +1,6 @@
 package main
 
-import "web1992/channeltest"
+import "web1992/httptest"
 
 func main() {
 	println(">>>>>> hello-go >>>>>>")
@@ -32,11 +32,11 @@ func main() {
 	// structtest2.StrucettTest2()
 
 	// channeltest.ChannelTest()
-	channeltest.RequestTest()
+	// channeltest.RequestTest()
 
 	// selecttest.SelectTest()
 
-	// httptest.UseChain()
+	httptest.UseChain()
 
 	// pointertest.Pointertest()
 

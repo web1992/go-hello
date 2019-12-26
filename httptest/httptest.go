@@ -87,8 +87,15 @@ func body(w http.ResponseWriter, r *http.Request) {
 
 	body := make([]byte, len)
 
-	r.Body.Read(body)
+	if readlen, ok := r.Body.Read(body); ok != nil {
+		if readlen > 0 {
+			fmt.Fprintf(w, "%s\n", string(body))
 
-	fmt.Fprintf(w, "%s\n", string(body))
+		} else {
+			fmt.Fprintf(w, "%s\n", "# body is empty.")
+		}
+	} else {
+		fmt.Fprintf(w, "%s\n", "service error.")
+	}
 
 }
