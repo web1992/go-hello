@@ -7,7 +7,7 @@ import (
 
 type empty interface{}
 
-// Request struct
+// Car struct
 type Car struct {
 	name   string
 	wheels int
