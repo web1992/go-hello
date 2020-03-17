@@ -15,19 +15,40 @@ func IfTest() {
 		fmt.Println("x is big then 10", x)
 	}
 
+	a := 1
+	if a > 0 {
+		fmt.Println("a is ", a)
+	}
+
 	str := "abcdef"
 
+	fmt.Println("index and val ")
 	// index and val
 	for index, s := range str {
-		fmt.Println(index, s)
+		fmt.Print(index, "-", s, "\t")
 	}
+	fmt.Println()
 
+	fmt.Println("only index ")
 	// only index
 	for index1 := range str {
-		fmt.Println(index1)
+		fmt.Print(index1, "\t")
 	}
 
+	fmt.Println()
+	fmt.Println("only val ")
+	// juset print val
 	for _, v := range str {
-		fmt.Println(v)
+		fmt.Print(v, "\t")
+	}
+	fmt.Println()
+}
+
+// TestFor test
+func TestFor() {
+
+	str := "abcd123456"
+	for index, val := range str {
+		fmt.Println(index, val)
 	}
 }
