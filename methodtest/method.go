@@ -39,9 +39,9 @@ func MethodTest() {
 	s := c1.start()
 	fmt.Println(s)
 	c1.run()
-	fmt.Println(c1)
+	fmt.Println("car String is ", c1)
 
 	var a = new(myint)
 	b := a.addOne(1)
-	fmt.Println(b)
+	fmt.Println("b is ", b)
 }
