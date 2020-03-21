@@ -11,9 +11,11 @@ type EmptyInterface interface{}
 type Car interface {
 	run()
 	start() string
+	bing()
 }
 
 // BenzCar struct
+// 奔驰
 type BenzCar struct {
 	name string
 }
@@ -26,8 +28,17 @@ func (car *BenzCar) start() string {
 	return car.name + " Car  start ..."
 }
 
+func (car *BenzCar) bing() {
+	fmt.Println("bing is from ", car.name)
+}
+
 // InterfaceTest test
 func InterfaceTest() {
+
+	carBenz1 := new(BenzCar)
+	carBenz1.name = "xxx xxx xxx"
+	carBenz1.run()
+	carBenz1.bing()
 
 	carBenz := new(BenzCar)
 	carBenz.name = "I am Benz "
@@ -50,7 +61,7 @@ func InterfaceTest() {
 	b2.run()
 	fmt.Println(ins2)
 	// below is error
-	// to slove this you can use b2 := BenzCar{"Benz 2"}
+	// to solve this you can use b2 := BenzCar{"Benz 2"}
 	// ins2 = b2
 	// ins2.run()
 

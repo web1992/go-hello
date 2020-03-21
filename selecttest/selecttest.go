@@ -28,7 +28,7 @@ func SelectTest() {
 	}
 
 	// tick test
-	fmt.Println("befor tick ", time.Now())
+	fmt.Println("before tick ", time.Now())
 	tick2 := <-time.Tick(2 * time.Second)
 	fmt.Println("tick2 is ", tick2)
 

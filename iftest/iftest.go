@@ -37,7 +37,7 @@ func IfTest() {
 
 	fmt.Println()
 	fmt.Println("only val ")
-	// juset print val
+	// just print val
 	for _, v := range str {
 		fmt.Print(v, "\t")
 	}

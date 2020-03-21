@@ -21,4 +21,5 @@ const (
 // IotaTest iota test
 func IotaTest() {
 	println("December is", December)
+	println("January is", January)
 }

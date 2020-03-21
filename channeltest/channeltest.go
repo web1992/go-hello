@@ -27,11 +27,10 @@ func ChannelTest() {
 	}()
 
 	val, ok := <-ch
-	fmt.Println("val ", val)
-	fmt.Println("ok ", ok)
+	fmt.Println("val ", val, "ok", ok)
 
 	empty := <-ch
-	fmt.Println(empty)
+	fmt.Println("empty is", empty)
 
 	close(ch)
 	go func() {
@@ -40,22 +39,22 @@ func ChannelTest() {
 	}()
 
 	time.Sleep(5)
-	v3, ok3 := <-ch
-	v4, ok4 := <-ch
-	fmt.Println("v3", v3, ok3)
-	fmt.Println("v4", v4, ok4)
+	v3, ok := <-ch
+	v4, ok := <-ch
+	fmt.Println("v3", v3, ok)
+	fmt.Println("v4", v4, ok)
 
 	// buffer channel
-	bufch := make(chan int, 5)
-	fmt.Println("bufch", bufch)
+	bufCh := make(chan int, 5)
+	fmt.Println("bufCh", bufCh)
 
-	bufch <- 1
-	bufch <- 1
-	bufch <- 1
-	bufch <- 1
-	bufch <- 1
+	bufCh <- 1 // 1
+	bufCh <- 1 // 2
+	bufCh <- 1 // 3
+	bufCh <- 1 // 4
+	bufCh <- 1 // 5
 	// 6
-	// bufch <- 1
+	// bufCh <- 1
 
 	// time.Sleep(1e9)
 
@@ -71,10 +70,11 @@ func RequestTest() {
 
 	go forChannelTest(carCh, start)
 
-	c := &Car{"a", 1}
+	c := &Car{"BenZ Car", 4}
+	c2 := &Car{"BenZ Car2", 8}
 
 	carCh <- c
-	carCh <- c
+	carCh <- c2
 
 	// time.Sleep(time.Second * 1)
 

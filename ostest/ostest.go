@@ -65,8 +65,8 @@ func ReadmeFileAll() {
 	byteBuf := make([]byte, 100)
 	for {
 		readLen, err := f.Read(byteBuf)
-		if nil == io.EOF {
-			log.Fatal("End of file")
+		if err == io.EOF {
+			log.Println("End of file")
 			return
 		}
 		if nil == err {
@@ -100,11 +100,9 @@ func ReadFileLineByLine() {
 			continue
 		}
 		if io.EOF == err {
-			log.Fatal("End of file")
-			break
+			log.Println("End of file")
+			return
 		}
-
-		log.Fatal("err for read file", err)
-		break
+		return
 	}
 }

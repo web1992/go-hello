@@ -23,7 +23,7 @@ func SliceTest() {
 	//slice1[4] = 66
 	//fmt.Println("slice1", slice1)
 
-	// test uninit slice
+	// test unInit slice
 	var nilSlice []int
 	fmt.Println("nil_slice", nilSlice)
 
@@ -32,23 +32,29 @@ func SliceTest() {
 	// [0 0 0 0 0 0]
 	fmt.Println("slice2", slice2)
 	slice2[0] = 66
-	// []
-	fmt.Println("slice2", nilSlice)
+	slice2[5] = 55
+	slice2[3] = 44
+	// [66 0 0 44 0 55]
+	fmt.Println("slice2", slice2)
 
-	// [0 0 0]
+	// [44 0 55]
 	slice3 := slice2[3:]
-	fmt.Println("slice3", slice3)
+	fmt.Println("slice3:", slice3)
 
 	slice2[0] = 77
 	slice3 = slice2[0:]
-	// [77 0 0 0 0 0]
+	// [77 0 0 44 0 55]
 	fmt.Println("slice3", slice3)
 
 	slice2[3] = 33
-	// [77 0 0 33 0 0]
+	// [77 0 0 33 0 55]
 	fmt.Println("slice2", slice2)
 	slice4 := slice2[3:4]
 	// [33]
 	fmt.Println("slice4", slice4)
 
+	// [77 0 0 33 0 55]
+	// [77 0 0]
+	slice5 := slice2[:3]
+	fmt.Println("slice5", slice5)
 }

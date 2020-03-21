@@ -10,7 +10,7 @@ var x int = 10
 func DeferTest() {
 
 	fmt.Println("A run")
-	defer afterFunc("Test 01")
+	defer afterFuncA("Test 01")
 	fmt.Println("B run")
 
 	// defer afterFunc("Test 02")
@@ -27,17 +27,17 @@ func DeferTest() {
 	}(x)
 
 	if 1 == 1 {
-		panic("error rrrrrrrrrrrrrr.")
+		//panic("error rrrrrrrrrrrrrr.")
 	}
 
 	println("I am last .")
 
 }
 
-func afterFunc(s string) {
-	fmt.Println("after run", s)
+func afterFuncA(s string) {
+	fmt.Println("afterFuncA after run", s)
 }
 
 func afterFuncB(x int) {
-	println("start afterFuncB:", x)
+	println("afterFuncB start afterFuncB:", x)
 }

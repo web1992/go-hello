@@ -2,14 +2,14 @@ package structtest2
 
 import "fmt"
 
-// StrucettTest2 test
-func StrucettTest2() {
+// StructTest2 test
+func StructTest2() {
 	bmHorse := &Horse{
 		Animal: &Animal{ // 注意此行
-			name:   "baima",
+			name:   "Mouse",
 			weight: 60,
 		},
-		speak: "neigh",
+		speak: "Zi zi zi",
 	}
 	bmHorse.hello()
 	fmt.Println(bmHorse.name)

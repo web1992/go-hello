@@ -5,8 +5,8 @@ import (
 	"fmt"
 )
 
-// Main test
-func Main() {
+// FuncTest test
+func FuncTest() {
 
 	deferTest()
 
@@ -25,7 +25,7 @@ func Main() {
 	sliceParamTest(2, s...)
 
 	// use func as param
-	useMulitReturnValuesFcunt(mulitReturnValuesTest())
+	useMultiReturnValuesFunc(multiReturnValuesTest())
 
 	// panicTest
 	defer func() {
@@ -84,14 +84,14 @@ func sliceParamTest(x int, args ...string) {
 	}
 }
 
-// mulitReturnValuesTest test
-func mulitReturnValuesTest() (int, string) {
-	return 1, "mulitReturnValuesTest"
+// multiReturnValuesTest test
+func multiReturnValuesTest() (int, string) {
+	return 1, "multiReturnValuesTest"
 }
 
-// useMulitReturnValuesFcunt used to test mulitReturnValuesTest
-func useMulitReturnValuesFcunt(num int, str string) {
-	fmt.Println(str, num)
+// useMultiReturnValuesFunc used to test multiReturnValuesTest
+func useMultiReturnValuesFunc(num int, str string) {
+	fmt.Println(num, str)
 }
 
 // deferTest

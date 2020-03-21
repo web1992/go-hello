@@ -5,7 +5,12 @@ import (
 	"net/http"
 )
 
-// MyHandler 实现Handler接口
+/**
+type Handler interface {
+	ServeHTTP(ResponseWriter, *Request)
+}
+*/
+// MyHandler 实现 Handler 接口
 type MyHandler struct{}
 
 func (h *MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {

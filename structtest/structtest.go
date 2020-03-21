@@ -42,7 +42,7 @@ func StructTest() {
 
 	var c C
 	c.a = "asda"
-	fmt.Println(c)
+	fmt.Println("C is", c)
 }
 
 type person struct {
