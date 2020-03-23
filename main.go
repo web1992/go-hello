@@ -1,9 +1,11 @@
 package main
 
-import "web1992/iotest"
+import (
+	"web1992/guess"
+)
 
 func main() {
 	println(">>>>>> hello-go >>>>>>")
 
-	iotest.IoTest()
+	guess.Guess()
 }
