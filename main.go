@@ -1,9 +1,9 @@
 package main
 
-import "web1992/httptest"
+import "web1992/iotest"
 
 func main() {
 	println(">>>>>> hello-go >>>>>>")
 
-	httptest.HTTPTest()
+	iotest.IoTest()
 }
