@@ -14,8 +14,6 @@ import (
 // Guess game
 func Guess() {
 
-	fmt.Println()
-
 	time := time.Now().Unix()
 	rand.Seed(time)
 	target := rand.Intn(100) + 1
