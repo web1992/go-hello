@@ -35,4 +35,10 @@ func TestArray() {
 	arr5[2] = "c"
 	//arr5[3]="c"
 	fmt.Println("arr5 is", arr5)
+	slice1 := arr5[1:2]
+	fmt.Println("slice1 is", slice1)
+	slice1[0] = "90"
+	fmt.Println("arr5 is", arr5)
+	fmt.Println("slice1 is", slice1)
+
 }

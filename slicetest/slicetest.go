@@ -4,6 +4,21 @@ import (
 	"fmt"
 )
 
+// SliceCreate is for slice create
+func SliceCreate() {
+
+	slice1 := make([]int, 7)
+	fmt.Println("slice1 is ", slice1)
+	slice1[0] = 1
+	fmt.Println("slice1 is ", slice1)
+	fmt.Println("slice1[0] is ", slice1[0])
+	fmt.Println("slice1 len is ", len(slice1))
+
+	for index, val := range slice1 {
+		fmt.Println("index ", index, "val ", val)
+	}
+}
+
 // SliceTest test
 func SliceTest() {
 
