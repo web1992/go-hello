@@ -19,6 +19,26 @@ func SliceCreate() {
 	}
 }
 
+// SliceAndVariadic for test slice and variadic
+func SliceAndVariadic() {
+	fmt.Printf("%.2f \n", average(10.0, 30, 40))
+	slice1 := []float64{1, 3, 4, 5, 2}
+	// slice + variadic
+	fmt.Printf("%.2f \n", average(slice1...))
+}
+
+// average is for cal these num you give and return
+func average(nums ...float64) float64 {
+
+	var sum float64 = 0
+
+	for _, num := range nums {
+		sum += num
+	}
+
+	return sum / float64(len(nums))
+}
+
 // SliceTest test
 func SliceTest() {
 
