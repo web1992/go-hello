@@ -4,6 +4,47 @@ import (
 	"fmt"
 )
 
+// MapCreate for init map use make
+func MapCreate() {
+
+	var myMap map[string]int
+
+	fmt.Println("myMap is", myMap)
+
+	// use make
+	myMap = make(map[string]int)
+	myMap["k1"] = 1
+	fmt.Println("myMap is", myMap)
+
+	// use {}
+	myMap2 := map[string]int{}
+	myMap2["a"] = 1
+	fmt.Println("myMap2 is", myMap2)
+	fmt.Println("myMap2[a] is", myMap2["a"])
+
+	myMap3 := map[int]int{1: 1, 2: 2}
+	fmt.Println("myMap3 is", myMap3)
+
+}
+
+func MapGet() {
+
+	myMap := map[string]int{"1": 1, "2": 2}
+
+	if v1, ok := myMap["1"]; ok {
+		fmt.Println("v1 is", v1)
+
+	}
+
+	if v2, ok := myMap["22"]; ok {
+		fmt.Println("v2 is", v2)
+
+	}
+	fmt.Println(myMap)
+	v22, ok := myMap["22"]
+	fmt.Println("key 22 is", v22, "ok is", ok)
+}
+
 // MapTest test
 func MapTest() {
 

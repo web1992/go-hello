@@ -1,11 +1,12 @@
 package main
 
 import (
-	"web1992/guess"
+	"fmt"
+	"os"
 )
 
 func main() {
-	println(">>>>>> hello-go >>>>>>")
+	// print args
+	fmt.Println(os.Args[1:])
 
-	guess.Guess()
 }
