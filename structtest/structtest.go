@@ -4,6 +4,21 @@ import (
 	"fmt"
 )
 
+// StructDeclare declare struct variables
+func StructDeclare() {
+
+	var myStruct struct {
+		number float64
+		word   string
+		toggle bool
+	}
+
+	fmt.Printf("%#v\n", myStruct)
+
+	myStruct.number = 3.14
+	fmt.Println("number is ", myStruct.number)
+}
+
 // StructTest test
 func StructTest() {
 
