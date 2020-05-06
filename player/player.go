@@ -11,7 +11,8 @@ func TryOut(player Player) {
 	player.Play("Test Track")
 	player.Stop()
 
-	// type
+	// type assertions
+	// 类型断言
 	tr, ok := player.(TapRecorder)
 	if ok {
 		tr.Record()
