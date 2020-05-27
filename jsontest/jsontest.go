@@ -7,7 +7,7 @@ import (
 )
 
 // Movie
-// json:"color,omitempty" 指定Json 格式化的格式
+// json:"color,omitempty" 指定Json 格式化的格式 (field tag)
 type Movie struct {
 	Title  string
 	Year   int
