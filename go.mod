@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/coreos/go-semver v0.3.0
-	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
+	gitlab.com/golang-commonmark/markdown v0.0.0-20191127184510-91b5b3c99c19
 	gopkg.in/yaml.v2 v2.2.5 // indirect
 )
 
