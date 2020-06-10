@@ -4,6 +4,8 @@ go 1.13
 
 require (
 	github.com/coreos/go-semver v0.3.0
+	github.com/gomarkdown/markdown v0.0.0-20200609195525-3f9352745725
+	github.com/yuin/goldmark v1.1.32
 	gitlab.com/golang-commonmark/markdown v0.0.0-20191127184510-91b5b3c99c19
 	gopkg.in/yaml.v2 v2.2.5 // indirect
 )
