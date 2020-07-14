@@ -13,4 +13,8 @@ func VarTest() {
 	fmt.Println(s)
 
 	fmt.Println("Global Var is:[", GlobalVar, "]")
+
+	var name string
+	name = "Lucy"
+	fmt.Println("name is:", name)
 }
