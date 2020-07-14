@@ -16,9 +16,10 @@ func ConstTest() {
 		c
 		d
 	)
-	fmt.Println(a, b, c, d)
+	fmt.Println("a,b,c,d", a, b, c, d)
 
 	const x = "1234"
+	//x="a" //error
 	fmt.Println("x is", x)
 
 	//x = "a"
