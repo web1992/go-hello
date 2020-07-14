@@ -16,10 +16,14 @@ func PointerTest() {
 	*ap++
 
 	fmt.Println("*ap after add is", *ap)
+	s := fmt.Sprintf("*ap after Type is %T", ap)
+	fmt.Println(s)
 
 	fmt.Println("======================")
 	v := 2
 	fmt.Println("v pointer is", &v)
+	vt := fmt.Sprintf("v pointer Type is %T", &v)
+	fmt.Println(vt)
 	*(&v)++
 	fmt.Println("*v is after add", v)
 
