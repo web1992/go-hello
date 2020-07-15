@@ -43,5 +43,5 @@ func OsStat() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(fileInfo.Size())
+	fmt.Println("size is", fileInfo.Size())
 }
