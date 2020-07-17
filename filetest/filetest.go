@@ -23,7 +23,7 @@ func main() {
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/", staticServer)
 
-	if err := http.ListenAndServe(":5549", nil); err != nil {
+	if err := http.ListenAndServe("0.0.0:5549", nil); err != nil {
 		log.Fatalf("error to start http server:%s", err.Error())
 	}
 }
