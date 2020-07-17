@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path"
 )
 
 var dir string
@@ -23,7 +24,7 @@ func main() {
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/", staticServer)
 
-	if err := http.ListenAndServe("0.0.0:5549", nil); err != nil {
+	if err := http.ListenAndServe("0.0.0.0:5549", nil); err != nil {
 		log.Fatalf("error to start http server:%s", err.Error())
 	}
 }
@@ -51,7 +52,7 @@ func init() {
 	//dir = path.Dir(os.Args[0])
 	//flag.Parse()
 	//flag.IntVar(&port, "port", 5549, "服务器端口")
-	//dir = path.Dir(uploadDir)
+	dir = path.Dir(uploadDir)
 	fmt.Println("dir:", http.Dir(dir))
 	staticHandler = http.FileServer(http.Dir(dir))
 }
