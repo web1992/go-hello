@@ -15,7 +15,8 @@ type Movie struct {
 	Actors []string
 }
 
-func MovieTest() {
+// MovieToJsonTest print json
+func MovieToJsonTest() {
 
 	var movies = []Movie{
 		{Title: "Shi Er Sheng Xiao", Year: 2020, Color: true, Actors: []string{"Cheng Long", "Sun Quan"}},
@@ -27,8 +28,10 @@ func MovieTest() {
 	if err != nil {
 		log.Fatal("Error", err)
 	}
-	fmt.Printf("j1:  \n %s ", j1)
+	fmt.Println()
+	fmt.Printf("未缩进显示:  \n %s ", j1)
 
+	fmt.Println()
 	fmt.Println()
 
 	// 缩进打印 json
@@ -38,5 +41,5 @@ func MovieTest() {
 		log.Fatalf("Error :%s", err)
 
 	}
-	fmt.Printf("j2: \n %s ", j2)
+	fmt.Printf("缩进显示: \n %s ", j2)
 }
