@@ -20,3 +20,9 @@ GOARCH=amd64 GOOS=linux go build main.go
 ## 文件上传
 
 - filetest.go
+
+## godoc
+
+```sh
+godoc -http=localhost:6060
+```
