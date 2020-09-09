@@ -22,11 +22,11 @@ type admin2 struct {
 }
 
 func (u user) notify() {
-	fmt.Println("Notify by user name=", u.name, " email=", u.email)
+	fmt.Printf("Notify by user name=%s email=%s \n", u.name, u.email)
 }
 
 func (a admin2) notify() {
-	fmt.Println("Notify by admin2 name=", a.user.name, " email=", a.user.email)
+	fmt.Printf("Notify by admin name=%s email=%s level=%s \n", a.user.name, a.user.email, a.level)
 }
 
 func SendNotify(n notifier) {
