@@ -18,7 +18,7 @@ type admin struct {
 
 type admin2 struct {
 	level string
-	user  user
+	u     user
 }
 
 func (u user) notify() {
@@ -26,7 +26,7 @@ func (u user) notify() {
 }
 
 func (a admin2) notify() {
-	fmt.Printf("Notify by admin name=%s email=%s level=%s \n", a.user.name, a.user.email, a.level)
+	fmt.Printf("Notify by admin name=%s email=%s level=%s \n", a.u.name, a.u.email, a.level)
 }
 
 func SendNotify(n notifier) {
