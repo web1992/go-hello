@@ -1,6 +1,9 @@
 package combiningtest
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestAdmin(t *testing.T) {
 
@@ -13,6 +16,8 @@ func TestAdmin(t *testing.T) {
 	a3 := new(admin2)
 	a3.level = "1"
 	a3.u = u
+	fmt.Printf("%s", u.name)
+	fmt.Printf("%s", u.email)
 
 	SendNotify(u)
 	SendNotify(a1)
