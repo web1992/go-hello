@@ -24,3 +24,14 @@ func TestAdmin(t *testing.T) {
 	SendNotify(a2)
 	SendNotify(a3)
 }
+
+// test use var init
+func TestAdmin3(t *testing.T) {
+	var admin3 admin2
+	admin3.notify()
+
+	admin4 := new(admin2)
+	admin4.u = user{"ManFen", "110@qq.com"}
+	admin4.level = "666"
+	admin4.notify()
+}
