@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type myint int
+type myInt int
 
 type car struct {
 	name  string
@@ -25,7 +25,7 @@ func (car *car) start() string {
 	return car.name + " started."
 }
 
-func (myint *myint) addOne(a int) int {
+func (myInt *myInt) addOne(a int) int {
 
 	return a + 1
 }
@@ -41,7 +41,7 @@ func MethodTest() {
 	c1.run()
 	fmt.Println("car String is ", c1)
 
-	var a = new(myint)
+	var a = new(myInt)
 	b := a.addOne(1)
 	fmt.Println("b is ", b)
 }
