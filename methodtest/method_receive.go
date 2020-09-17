@@ -2,6 +2,11 @@ package methodtest
 
 import "fmt"
 
+type shape interface {
+	area()
+	double()
+}
+
 type rectangle struct {
 	w float64
 	h float64
