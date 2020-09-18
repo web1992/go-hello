@@ -17,4 +17,8 @@ func VarTest() {
 	var name string
 	name = "Lucy"
 	fmt.Println("name is:", name)
+
+	var c = "1312"
+	fmt.Println("c is:", c)
+
 }
