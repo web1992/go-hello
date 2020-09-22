@@ -36,3 +36,20 @@ func TestReceive3(t *testing.T) {
 	r.double()
 	r.area()
 }
+func Test1(t *testing.T) {
+	var c coder = &Gopher{"Go"}
+	var c1 coder = &Gopher{"Go"}
+	var c2 = Gopher{"Go"}
+	fmt.Println("var c coder is " + typeof(c))
+	fmt.Println("var c1 coder is " + typeof(c1))
+	fmt.Println("var c2 coder is " + typeof(c2))
+	c.code()
+	c.debug()
+	c2.debug()
+}
+
+func test2() {
+	//var c coder = Gopher{"Go"}
+	//c.code()
+	//c.debug()
+}

@@ -34,15 +34,6 @@ func (r *rectangle) double() {
 	r.h = r.h * 2
 }
 
-func TestReceive() {
-
-	var r = rectangle{2, 3}
-
-	r.area()
-	r.double()
-	r.area()
-}
-
 type coder interface {
 	code()
 	debug()
@@ -58,22 +49,4 @@ func (p Gopher) code() {
 
 func (p *Gopher) debug() {
 	fmt.Printf("I am debuging %s language\n", p.language)
-}
-
-func Test1() {
-	var c coder = &Gopher{"Go"}
-	var c1 coder = &Gopher{"Go"}
-	var c2 = Gopher{"Go"}
-	fmt.Println("var c coder is " + typeof(c))
-	fmt.Println("var c1 coder is " + typeof(c1))
-	fmt.Println("var c2 coder is " + typeof(c2))
-	c.code()
-	c.debug()
-	c2.debug()
-}
-
-func test2() {
-	//var c coder = Gopher{"Go"}
-	//c.code()
-	//c.debug()
 }
