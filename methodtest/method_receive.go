@@ -5,6 +5,8 @@ import (
 	"reflect"
 )
 
+// https://mp.weixin.qq.com/s/XKirIaGmyBAwpFKo9Yekxw
+
 func printArea(s shape) {
 	s.area()
 }
