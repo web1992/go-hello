@@ -21,3 +21,18 @@ func TestReceive2(t *testing.T) {
 	r.double()
 	r.area()
 }
+
+func TestReceive3(t *testing.T) {
+
+	var r = &rectangle{2, 3}
+	// 如果不加 & printArea 就会报错
+	// var r = rectangle{2, 3}
+
+	printArea(r)
+
+	fmt.Printf("%T \n", r)
+	fmt.Println(typeof(r))
+	r.area()
+	r.double()
+	r.area()
+}

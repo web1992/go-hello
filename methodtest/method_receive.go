@@ -5,6 +5,10 @@ import (
 	"reflect"
 )
 
+func printArea(s shape) {
+	s.area()
+}
+
 func typeof(v interface{}) string {
 	return reflect.TypeOf(v).String()
 }
