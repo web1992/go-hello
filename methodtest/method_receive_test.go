@@ -5,9 +5,6 @@ import (
 	"testing"
 )
 
-func Test11(t *testing.T) {
-	Test1()
-}
 func TestReceive2(t *testing.T) {
 
 	var r = rectangle{2, 3}
@@ -43,6 +40,9 @@ func Test1(t *testing.T) {
 	fmt.Println("var c coder is " + typeof(c))
 	fmt.Println("var c1 coder is " + typeof(c1))
 	fmt.Println("var c2 coder is " + typeof(c2))
+
+	fmt.Printf("c1 T is %T, \n", c1)
+	fmt.Printf("c2 T is %T, \n", c2)
 	c.code()
 	c.debug()
 	c2.debug()
