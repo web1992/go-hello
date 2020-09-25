@@ -1,6 +1,8 @@
 package converttest
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestName(t *testing.T) {
 	test1()
