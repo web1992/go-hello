@@ -5,51 +5,31 @@ import (
 	"time"
 )
 
-// SelectTest test
-func SelectTest() {
-
-	fmt.Println("SelectTest ", time.Now())
+func After() {
+	fmt.Println("After Test ", time.Now())
 	ch := <-time.After(2 * time.Second)
 	// below will print after 2 second
 	fmt.Println("now is ", ch)
 
-	// select test
-	select {
+}
 
-	case val := <-time.After(2 * time.Second):
-		{
-			fmt.Println("after 2 second val is ", val)
-		}
-
-	case <-time.After(5 * time.Second):
-		{
-			fmt.Println("after 5 second ")
-		}
-	}
-
+func Tick() {
 	// tick test
 	fmt.Println("before tick ", time.Now())
-	tick2 := <-time.Tick(2 * time.Second)
-	fmt.Println("tick2 is ", tick2)
 
-	// for {
+	c := 1
+	for {
+		if c > 5 {
+			return
+		}
+		tick2 := <-time.Tick(1 * time.Second)
+		fmt.Println("tick2 is ", tick2)
+		c++
+	}
+}
 
-	// 	tick1 := time.Tick(1 * time.Second)
-	// 	tick2 := time.Tick(8 * time.Second)
-
-	// 	select {
-	// 	case <-tick1:
-	// 		{
-	// 			fmt.Println("time tick is 2 ", time.Now().Second())
-	// 		}
-	// 	case <-tick2:
-	// 		{
-	// 			fmt.Println("time tick is 8 ", time.Now().Second())
-	// 			return
-	// 		}
-
-	// 	}
-	// }
+// SelectTest test
+func SelectTest() {
 
 	tick := time.Tick(1 * time.Second)
 	after := time.After(7 * time.Second)
