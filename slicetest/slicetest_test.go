@@ -7,3 +7,7 @@ func TestSliceTest(t *testing.T) {
 	//SliceCreate()
 	SliceAndVariadic()
 }
+
+func TestAppend(t *testing.T) {
+	Append()
+}
