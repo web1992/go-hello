@@ -24,3 +24,7 @@ func TestAfter(t *testing.T) {
 func TestTick(t *testing.T) {
 	Tick()
 }
+
+func TestExample_textMarshalJSON(t *testing.T) {
+	Example_textMarshalJSON()
+}
