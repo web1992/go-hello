@@ -7,3 +7,11 @@ import "testing"
 func TestFile(t *testing.T) {
 	main()
 }
+
+func TestReadFile(t *testing.T) {
+	readFile()
+}
+
+func TestWriteFile(t *testing.T) {
+	writeFile()
+}

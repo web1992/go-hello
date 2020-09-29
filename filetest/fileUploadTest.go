@@ -1,4 +1,4 @@
-// GOARCH=amd64 GOOS=linux go build filetest.go
+// GOARCH=amd64 GOOS=linux go build fileUploadTest.go
 
 package filetest
 
