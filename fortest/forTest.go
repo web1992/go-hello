@@ -2,6 +2,7 @@ package fortest
 
 import "fmt"
 
+// arr 会被 copy 成临时变量，因此不是原来的arr了
 func ForAppend() {
 	arr := []int{1, 2, 3}
 	for _, v := range arr {
