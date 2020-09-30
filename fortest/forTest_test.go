@@ -14,5 +14,5 @@ func TestForTest2(t *testing.T) {
 
 func TestForTest3(t *testing.T) {
 
-	main3()
+	ForMap()
 }
