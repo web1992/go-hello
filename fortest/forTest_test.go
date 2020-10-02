@@ -14,5 +14,12 @@ func TestForTest2(t *testing.T) {
 
 func TestForTest3(t *testing.T) {
 
-	ForMap()
+	i := 0
+	for {
+		ForMap()
+		if i > 1000 {
+			break
+		}
+		i++
+	}
 }
