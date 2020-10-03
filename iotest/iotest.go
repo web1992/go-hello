@@ -32,7 +32,6 @@ func IoTest() {
 		status = "passing"
 	} else {
 		status = "failing"
-
 	}
 	fmt.Println("a grade of", grade, "is", status)
 

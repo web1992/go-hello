@@ -2,6 +2,7 @@ package httptest
 
 import (
 	"fmt"
+	log2 "log"
 	"net/http"
 )
 
@@ -68,7 +69,11 @@ func UseChain() {
 	}
 	http.Handle("/hello", log(&myHandler))
 	http.HandleFunc("/body", body)
-	server.ListenAndServe()
+	err := server.ListenAndServe()
+	if err != nil {
+		log2.Fatal("create service error", err)
+	}
+	log2.Println("listen on 127.0.0.1:8080")
 }
 
 // log
