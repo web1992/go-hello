@@ -10,6 +10,8 @@ func MapCreate() {
 	var myMap map[string]int
 
 	fmt.Println("myMap is", myMap)
+	fmt.Println("myMap is nil", myMap == nil)
+	// myMap["a"] = 1 // this will get error
 
 	// use make
 	myMap = make(map[string]int)
@@ -20,26 +22,31 @@ func MapCreate() {
 	myMap2 := map[string]int{}
 	myMap2["a"] = 1
 	fmt.Println("myMap2 is", myMap2)
-	fmt.Println("myMap2[a] is", myMap2["a"])
+	fmt.Println("myMap2 [a] is", myMap2["a"])
 
 	myMap3 := map[int]int{1: 1, 2: 2}
 	fmt.Println("myMap3 is", myMap3)
 
+	myMap4 := make(map[int]int)
+	fmt.Println("myMap4 is ", myMap4)
 }
 
 func MapGet() {
 
-	myMap := map[string]int{"1": 1, "2": 2}
+	myMap := map[string]int{"1": 1, "2": 2, "33": 33}
 
 	if v1, ok := myMap["1"]; ok {
 		fmt.Println("v1 is", v1)
-
 	}
 
 	if v2, ok := myMap["22"]; ok {
 		fmt.Println("v2 is", v2)
-
 	}
+
+	if v3, ok := myMap["33"]; ok {
+		fmt.Println("33 is ", v3)
+	}
+
 	fmt.Println(myMap)
 	v22, ok := myMap["22"]
 	fmt.Println("key 22 is", v22, "ok is", ok)
