@@ -37,7 +37,7 @@ func TestBlockQueue(t *testing.T) {
 
 	}()
 
-	// let main not exit
+	// let main goroutine not exit
 	w.Wait()
 
 }
