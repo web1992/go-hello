@@ -11,3 +11,7 @@ func TestSliceTest(t *testing.T) {
 func TestAppend(t *testing.T) {
 	Append()
 }
+
+func TestSliceCut(t *testing.T) {
+	SliceCut()
+}
