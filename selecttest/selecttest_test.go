@@ -1,6 +1,8 @@
 package selecttest
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSelectTest(t *testing.T) {
 	SelectTest()
@@ -23,8 +25,4 @@ func TestAfter(t *testing.T) {
 }
 func TestTick(t *testing.T) {
 	Tick()
-}
-
-func TestExample_textMarshalJSON(t *testing.T) {
-	Example_textMarshalJSON()
 }

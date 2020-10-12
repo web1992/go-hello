@@ -1,4 +1,4 @@
-package selecttest
+package jsontest
 
 import (
 	"encoding/json"
