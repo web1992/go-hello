@@ -11,6 +11,8 @@ func panicError() {
 func main() {
 	fmt.Println("main start")
 	panicRun()
+	// 使用了 recover 捕获了 panic
+	// 所以下面的代码依然会执行
 	fmt.Println("main end")
 }
 
