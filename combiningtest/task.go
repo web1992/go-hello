@@ -21,6 +21,7 @@ func main() {
 	task.name = "PLP"
 	task.id = 1
 	task.no = "OX000001"
+	// TaskFeature
 	task.num = 10
 	task.price = 200
 	task.desc = "demo"
