@@ -16,4 +16,8 @@ func InitArray() {
 	fmt.Println("user", user)
 	fmt.Println("&user", &user)
 
+	var a3 = [...]int{1, 3, 4}
+
+	fmt.Println("a3", a3, "le is ", len(a3))
+
 }
