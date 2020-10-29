@@ -3,13 +3,9 @@ package binarysearch
 import "fmt"
 
 // binarySearch 二分查找
-func binarySearch() {
+func binarySearch(findNum int, arr []int) int {
 	// low .........mid..............high
-	// 数组必须有序
-	arr := []int{1, 2, 3, 4, 5, 6, 7, 8}
-	fmt.Println(arr)
-
-	findNum := 1
+	// arr := []int{1, 2, 3, 4, 5, 7, 8, 9, 10}
 
 	low := 0
 	high := len(arr)
@@ -20,7 +16,7 @@ func binarySearch() {
 		k := arr[mid]
 		if findNum == k {
 			fmt.Println("[find it, index is]:", mid)
-			break
+			return mid
 		} else if findNum > k {
 			low = mid + 1
 		} else {
@@ -29,4 +25,5 @@ func binarySearch() {
 	}
 	fmt.Println("[find times]:", c)
 
+	return -1
 }
