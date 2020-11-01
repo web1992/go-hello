@@ -11,3 +11,10 @@ func TestFactorial(t *testing.T) {
 	i := factorial(5)
 	fmt.Println(i)
 }
+
+// 使用递归计算 合计
+func TestSum(t *testing.T) {
+	a := []int{1, 2, 3, 4, 5}
+	s := sum(a)
+	fmt.Println(s)
+}
