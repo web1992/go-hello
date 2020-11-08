@@ -1,11 +1,11 @@
-package bfs
+package bfsdfs
 
 import (
 	"fmt"
 	"web1992/queuetest"
 )
 
-// bfs.png
+// bfsdfs.png
 // B,C 是A 的一度关系
 // D,E 是A 的二度关系
 // F   是A 的三读关系

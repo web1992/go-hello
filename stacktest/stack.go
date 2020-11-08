@@ -15,6 +15,10 @@ func New() *Stack {
 	}
 }
 
+func (s *Stack) Empty() bool {
+	return s.size == 0
+}
+
 func (s *Stack) Push(e interface{}) {
 	s.l.PushFront(e)
 	s.size++
