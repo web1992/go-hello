@@ -15,6 +15,18 @@ func NewQueue() *Queue {
 	}
 }
 
+func (q *Queue) Empty() bool {
+
+	return q.size == 0
+}
+
+func (q *Queue) ArrEnter(arrE []interface{}) {
+
+	for _, e := range arrE {
+		q.Enter(e)
+	}
+}
+
 func (q *Queue) Enter(e interface{}) {
 
 	q.l.PushBack(e)
