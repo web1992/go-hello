@@ -44,6 +44,14 @@ func (pq PQ) Swap(i, j int) {
 	pq[i].index = i
 	pq[j].index = j
 }
+func (pq *PQ) PoPKey(k string, p int) string {
+	e := pq.Pop()
+	return e.(entry).key
+}
+
+func (pq *PQ) PushKey(k string, p int) {
+	pq.Push(&entry{key: k, priority: p})
+}
 
 // Push 往 pq 中放 entry
 func (pq *PQ) Push(x interface{}) {

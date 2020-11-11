@@ -15,6 +15,15 @@ func TestPQ(t *testing.T) {
 	pq.Push(e1)
 	pq.Push(e2)
 	pq.Push(e3)
+	pq.PushKey("1", 1)
 
 	fmt.Println(pq.ToString())
+	fmt.Println(pq.Pop())
+	fmt.Println(pq.Pop())
+	fmt.Println(pq.Pop())
+	fmt.Println(pq.Pop())
+	fmt.Println(pq.Pop())
+	fmt.Println(pq.Pop())
+	// Expect Out:
+	// [1,5,2,3,4]
 }
