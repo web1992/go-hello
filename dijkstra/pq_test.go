@@ -18,12 +18,8 @@ func TestPQ(t *testing.T) {
 	pq.PushKey("1", 1)
 
 	fmt.Println(pq.ToString())
-	fmt.Println(pq.Pop())
-	fmt.Println(pq.Pop())
-	fmt.Println(pq.Pop())
-	fmt.Println(pq.Pop())
-	fmt.Println(pq.Pop())
-	fmt.Println(pq.Pop())
+	fmt.Println(pq.PoPKey())
+
 	// Expect Out:
 	// [1,5,2,3,4]
 }

@@ -44,9 +44,9 @@ func (pq PQ) Swap(i, j int) {
 	pq[i].index = i
 	pq[j].index = j
 }
-func (pq *PQ) PoPKey(k string, p int) string {
+func (pq *PQ) PoPKey() (string, int) {
 	e := pq.Pop()
-	return e.(entry).key
+	return e.(*entry).key, e.(*entry).priority
 }
 
 func (pq *PQ) PushKey(k string, p int) {
