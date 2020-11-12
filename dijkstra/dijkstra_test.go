@@ -26,4 +26,7 @@ func Test(t *testing.T) {
 
 	fmt.Println("parent", parent)
 	fmt.Println("distance", distance)
+
+	printLine(distance, parent)
+
 }

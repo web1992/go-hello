@@ -2,9 +2,7 @@ package dijkstra
 
 import (
 	"container/heap"
-	"fmt"
 	"sort"
-	"strings"
 )
 
 // 以下实现优先级队列
@@ -23,20 +21,10 @@ type entry struct {
 // PQ implements heap.Interface and holds entries.
 type PQ []*entry
 
-func (pq PQ) ToString() string {
-	s := "["
-	for _, v := range pq {
-		s += fmt.Sprint(v.key, ",")
-	}
-	s = strings.TrimSuffix(s, ",")
-	s += "]"
-	return s
-}
-
 func (pq PQ) Len() int { return len(pq) }
 
 func (pq PQ) Less(i, j int) bool {
-	return pq[i].priority < pq[j].priority
+	return pq[i].priority > pq[j].priority
 }
 
 func (pq PQ) Swap(i, j int) {

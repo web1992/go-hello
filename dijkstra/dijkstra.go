@@ -15,7 +15,7 @@ func dijkstra(graph map[string]map[string]int, start string) (map[string]int, ma
 	pq := &PQ{}
 	parent := make(map[string]string)
 	distance := initDistance(graph, start)
-	fmt.Println("distance is", distance)
+	// fmt.Println("distance is", distance)
 	parent[start] = "nil"
 
 	pq.PushKey(start, 0)
@@ -24,7 +24,7 @@ func dijkstra(graph map[string]map[string]int, start string) (map[string]int, ma
 		v, d := pq.PoPKey()
 		processed.Add(v)
 		nodes := graph[v]
-		// v -> w
+		// v -> w 的点
 		for w, _ := range nodes {
 			if !processed.Has(w) {
 				if d+graph[v][w] < distance[w] {
@@ -43,9 +43,21 @@ func initDistance(graph map[string]map[string]int, start string) map[string]int 
 	distance[start] = 0
 	for k, _ := range graph {
 		if k != start {
-			distance[k] = math.MaxInt32
+			distance[k] = MAX
 		}
 	}
 
 	return distance
+}
+
+func printLine(distance map[string]int, parent map[string]string) {
+	p := parent["F"]
+	l := len(parent) - 2
+
+	fmt.Println("F", "--", distance["F"]-distance[p], "->", p)
+	for l > 0 {
+		fmt.Println(p, "--", distance[p]-distance[parent[p]], "->", parent[p])
+		p = parent[p]
+		l--
+	}
 }
