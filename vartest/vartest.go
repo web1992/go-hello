@@ -7,6 +7,11 @@ var (
 	GlobalVar = "I am global var."
 )
 
+type User struct {
+	Name  string
+	Level int32
+}
+
 // VarTest test var
 func VarTest() {
 	s := 1
