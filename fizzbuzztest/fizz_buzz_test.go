@@ -2,7 +2,7 @@ package fizzbuzztest
 
 import "testing"
 
-func TestMaint(t *testing.T) {
+func Test_main(t *testing.T) {
 
 	main()
 }
