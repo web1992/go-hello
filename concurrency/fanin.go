@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func boring4(msg string) chan string {
 	ch := make(chan string)
@@ -8,6 +12,7 @@ func boring4(msg string) chan string {
 
 		for i := 0; i < 10; i++ {
 			ch <- fmt.Sprintf("%s,%d", msg, i)
+			time.Sleep(time.Duration(rand.Intn(1e3)) * time.Microsecond)
 		}
 		close(ch)
 	}()
@@ -57,8 +62,6 @@ func fanSimple(ch2 ...<-chan string) <-chan string {
 // merge tow chan to one chan
 func main() {
 
-	fmt.Println("You're both boring. I'm leaving")
-
 	ch1 := boring4("Tom")
 	ch2 := boring4("Jerry")
 
@@ -71,4 +74,5 @@ func main() {
 	for i := 1; i < 10; i++ {
 		fmt.Println(<-c2)
 	}
+	fmt.Println("You're both boring. I'm leaving")
 }
