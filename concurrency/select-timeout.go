@@ -19,7 +19,7 @@ func boring6(msg string) <-chan string {
 
 func main() {
 
-	time := time.After(3 * time.Second)
+	t := time.After(3 * time.Second)
 
 	c := boring6("Tom")
 
@@ -27,7 +27,7 @@ func main() {
 		select {
 		case s := <-c:
 			fmt.Println(s)
-		case <-time:
+		case <-t:
 			{
 				fmt.Println("out time")
 				return
