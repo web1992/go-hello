@@ -11,6 +11,9 @@ import (
 	"sync"
 )
 
+// done <-chan struct{} 的作用是用来终止 goroutine
+// 可参考下面文章
+// https://www.cnblogs.com/apocelipes/p/10344011.html
 type result struct {
 	path string
 	sum  [md5.Size]byte
